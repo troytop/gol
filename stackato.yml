@@ -1,0 +1,5 @@
+name: gollum
+mem: 128 
+processes:
+  web: gollum --port $PORT 
+ignores: []
