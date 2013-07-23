@@ -5,6 +5,35 @@ gollum -- A wiki built on top of Git
 [![Build Status](https://secure.travis-ci.org/gollum/gollum.png?branch=master)](http://travis-ci.org/gollum/gollum)
 [![Dependency Status](https://gemnasium.com/gollum/gollum.png)](https://gemnasium.com/gollum/gollum)
 
+## DEPLOYING TO STACKATO
+
+This wiki can be deployed to any Stackato PaaS. It uses [gollum](https://github.com/gollum/gollum) (the gollum README is included verbatim here).
+
+Before pushing to Stackato, first run `bundle install`:
+
+```bash
+  $ bundle install
+```
+
+Note that the Gemfile pins [nokogiri](http://nokogiri.org/) to version 1.5.10 to avoid some build problems on Ubuntu 12.04 (the base image for Stackato 2.10).
+
+Once `bundle install` completes, `stackato push` this to your targetted API endpoint:
+
+```bash
+  $ stackato push [optional-name]
+```
+
+## WORKING WITH A GOLLUM WIKI AND STACKATO
+
+Gollum uses git to store content. If you make edits on the *deployed* copy of the wiki, you might want to log in to your application container and push those changes to your own upstream repo:
+
+```bash
+  $ stackato ssh gollum-wiki
+  gollum-wiki.stacka.to:~$ git remote rm origin
+  gollum-wiki.stacka.to:~$ git remote add origin https://github.com/yourname/gollum-wiki.git
+  gollum-wiki.stacka.to:~$ git push
+```
+
 ## DESCRIPTION
 
 Gollum is a simple wiki system built on top of Git that powers GitHub Wikis.
