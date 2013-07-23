@@ -1,13 +1,10 @@
 gollum -- A wiki built on top of Git
 ====================================
 
-[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
-[![Build Status](https://secure.travis-ci.org/gollum/gollum.png?branch=master)](http://travis-ci.org/gollum/gollum)
-[![Dependency Status](https://gemnasium.com/gollum/gollum.png)](https://gemnasium.com/gollum/gollum)
 
 ## DEPLOYING TO STACKATO
 
-This wiki can be deployed to any Stackato PaaS. It uses [gollum](https://github.com/gollum/gollum) (the gollum README is included verbatim here).
+This [gollum](https://github.com/gollum/gollum) wiki can be deployed to any Stackato PaaS. 
 
 Before pushing to Stackato, first run `bundle install`:
 
@@ -20,8 +17,10 @@ Note that the Gemfile pins [nokogiri](http://nokogiri.org/) to version 1.5.10 to
 Once `bundle install` completes, `stackato push` this to your targetted API endpoint:
 
 ```bash
-  $ stackato push [optional-name]
+  $ stackato push -n [optional-name]
 ```
+
+The *stackato.yml* specifies the start command: `gollum --port $PORT`
 
 ## WORKING WITH A GOLLUM WIKI AND STACKATO
 
@@ -42,6 +41,15 @@ Next, add an upstream URL on a git server. I'd suggest using the HTTPS URL rathe
   Password for 'https://you@github.com': 
   ...
 ```
+
+The following is the verbatim README for gollum from the [source repository](https://github.com/gollum/gollum).
+
+--------------------------
+
+[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
+[![Build Status](https://secure.travis-ci.org/gollum/gollum.png?branch=master)](http://travis-ci.org/gollum/gollum)
+[![Dependency Status](https://gemnasium.com/gollum/gollum.png)](https://gemnasium.com/gollum/gollum)
+
 
 ## DESCRIPTION
 
