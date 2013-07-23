@@ -34,7 +34,7 @@ First remove this upstream repo, you won't be able to push to it.
 ```bash
   gollum-wiki.stacka.to:~$ git remote rm origin
 ```
-Next, add an upstream URL on a git server. I'd suggest using the HTTPS URL rather than messing with RSA keys in Stackato application continers.
+Next, add an upstream URL on a git server. I'd suggest using the HTTPS URL rather than messing with RSA keys in Stackato application containers.
 ```bash
   gollum-wiki.stacka.to:~$ git remote add origin https://github.com/you/gollum-wiki.git
   gollum-wiki.stacka.to:~$ git push
