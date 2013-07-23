@@ -2,7 +2,7 @@ gollum -- A wiki built on top of Git
 ====================================
 
 
-## DEPLOYING TO STACKATO
+## Deploying to Stackato
 
 This [gollum](https://github.com/gollum/gollum) wiki can be deployed to any Stackato PaaS. 
 
@@ -22,7 +22,7 @@ Once `bundle install` completes, `stackato push` this to your targetted API endp
 
 The *stackato.yml* specifies the start command: `gollum --port $PORT`
 
-## WORKING WITH A GOLLUM WIKI AND STACKATO
+## Using a git-based wiki with Stackato
 
 Gollum uses git to store content. If you make edits on the *deployed* copy of the wiki, you might want to log in to your application container and push those changes to your own upstream repo. For example:
 
