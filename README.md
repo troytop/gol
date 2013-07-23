@@ -30,8 +30,9 @@ Gollum uses git to store content. If you make edits on the *deployed* copy of th
 ```bash
   $ stackato ssh gollum-wiki
   gollum-wiki.stacka.to:~$ git remote rm origin
-  gollum-wiki.stacka.to:~$ git remote add origin https://github.com/yourname/gollum-wiki.git
+  gollum-wiki.stacka.to:~$ git remote add origin https://github.com/you/gollum-wiki.git
   gollum-wiki.stacka.to:~$ git push
+  ...
 ```
 
 ## DESCRIPTION
